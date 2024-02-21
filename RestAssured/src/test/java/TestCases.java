@@ -5,8 +5,6 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.util.Random;
-
 import static io.restassured.RestAssured.given;
 
 public class TestCases {
@@ -15,6 +13,7 @@ public class TestCases {
         private static final String USERS_ENDPOINT = "/users";
         private static final String POSTS_ENDPOINT = "/posts";
         private static int USER_ID;
+
 
         @BeforeClass
         public static void setup() {
@@ -47,10 +46,18 @@ public class TestCases {
                     flag = false;
                     break;
                 }
+
+
+            System.out.println(flag);
             return flag;
+
         }
 
-        public static boolean checkPostId(JsonPath jsonPath)
+
+
+
+
+    public static boolean checkPostId(JsonPath jsonPath)
         {
 
             boolean flag =true;
@@ -59,8 +66,11 @@ public class TestCases {
                     flag = false;
                     break;
                 }
+            System.out.println(flag);
             return flag;
         }
+
+
 
     }
 

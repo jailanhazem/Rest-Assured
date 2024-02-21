@@ -7,5 +7,4 @@ public class Requests {
         return new Random().nextInt(10)+1;
     }
 
-
 }
